@@ -9,15 +9,24 @@ readme = "README.md"
 python = "^3.11"
 nonebot2 = {extras = ["fastapi"], version = "^2.3.2"}
 nonebot-adapter-onebot = "^2.4.4"
-nonebot-plugin-genshinuid = "^4.6.1"
+nonebot-plugin-genshinuid = "4.7.2"
 nb-cli = "^1.4.1"
+nonebot-plugin-admin = "^0.4.5.5"
+nonebot-plugin-poke = "^0.1.3"
+nonebot-plugin-setu-now = "^0.6.4"
+nonebot-plugin-analysis-bilibili = "^2.7.6"
 
 
 [tool.nonebot]
 adapters = [
     { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
 ]
-plugins = ["GenshinUID"]
+plugins = [
+    "GenshinUID",
+    "nonebot_plugin_admin",
+    "nonebot_plugin_setu_now",
+    "nonebot_plugin_analysis_bilibili"
+]
 plugin_dirs = []
 builtin_plugins = []
 
