@@ -1,0 +1,25 @@
+{
+  "HOST": "localhost", // 本机Host, 一般无需修改
+  "PORT": "8765", // GsCore运行端口, 一般无需修改
+  "masters": [
+    "444835641" // master权限账号, 类型为List[string], 对应权限pm=0
+  ],
+  "superusers": [], // superuser权限账号, 类型为List[string], 对应权限pm=1
+  "misfire_grace_time": 90, // 定时任务超时时间, 一般无需修改
+  "log": {
+    "level": "DEBUG" // 日志等级，一般为`INFO`且无需修改, 开发者和反馈Bug的时候开到`DEBUG`
+  },
+  "command_start": [
+    "*" // 命令头, 类型为List[string], 默认为[], 填入此项后则所有命令必须带命令头触发
+  ],
+  "sv": { // 插件注册的全部服务列表, 均可通过网页控制台修改
+    "Core管理": {
+      "priority": 5, // 某个服务的优先级
+      "enabled": true, // 某个服务是否启用
+      "pm": 0, // 某个服务要求的权限等级
+      "black_list": [], // 某个服务的黑名单, 类型为List[string]
+      "area": "ALL", // 某个服务的响应范围, "ALL", "GROUP", "DIRECT"
+      "white_list": [] // 某个服务的白名单, 类型为List[string]
+    }
+  }
+}
